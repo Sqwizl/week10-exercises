@@ -51,3 +51,31 @@ console.log(classifyGrade(45));
 // the first console log will return A since 95 is greater than 90
 // the second console log will return C since 73 is between 70 and 79
 // the third console log will return F since 45 is less than 60
+
+
+function classifyGrade(score) {
+    if (score > 100 || score < 0) {
+        return "Invalid score";
+    } else if (score >= 90) {
+        return "A";
+        // if score is 90 or above, print 'A'
+    } else if (score >= 80) {
+        return "B";
+        // if score is 80 - 89, print 'B'
+    } else if (score >= 70) {
+        return "C";
+        // if score is 70 - 79, print 'C'
+    } else if (score >= 60) {
+        return "D";
+        // if score is 60 - 69, print 'D'
+    } else {
+        return "F";
+        // if score is below 60, print 'F'
+    }
+}
+const result1 = classifyGrade(95);
+const result2 = classifyGrade(73);
+const result3 = classifyGrade(45);
+console.log(result1); // should print 'A'
+console.log(result2); // should print 'C'
+console.log(result3); // should print 'F'
