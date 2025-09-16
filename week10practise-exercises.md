@@ -31,7 +31,32 @@ Write a function called `classifyAge` that takes an age parameter and returns a 
 ---
 
 ### Question 6: Number Range Checker
-Write a function called `isInRange` that takes three parameters: `number`, `min`, and `max`. The function should determine if the number falls within the specified range and return different messages based on the position.
+
+// Function to check if a number is within a given range
+function isInRange(number, min, max) {
+  // Check if number is below the minimum
+  if (number < min) {
+    return "Number is below range";
+  } else if (number > max) {
+    // Check if number is above the maximum
+    return "Number is above range";
+  } else if (number === min) {
+    // Check if number is at the minimum boundary
+    return "Number is at minimum boundary";
+  } else if (number === max) {
+    // Check if number is at the maximum boundary
+    return "Number is at maximum boundary";
+  } else if (number > min && number < max) {
+    // Check if number is within the range
+    return "Number is within range";
+  }
+}
+
+// Test cases
+console.log(isInRange(5, 1, 10));   // Should print "Number is within range"
+console.log(isInRange(15, 1, 10));  // Should print "Number is above range"
+console.log(isInRange(1, 1, 10));   // Should print "Number is at minimum boundary"
+console.log(isInRange(10, 1, 10));  // Should print "Number is at maximum boundary"
 
 **Requirements:**
 - Return different messages based on number's position:
